@@ -11,12 +11,9 @@ import SpriteKit
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+        backgroundColor = SKColor.blackColor()
+        showEmitter("ParticleSnow", position: CGPoint(x: 200, y: 200))
+
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -41,5 +38,13 @@ class GameScene: SKScene {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+    }
+    
+    
+    func showEmitter( name : String, position : CGPoint) {
+        let path = NSBundle.mainBundle().pathForResource(name, ofType: "sks")
+        let emitter = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? SKEmitterNode
+        emitter!.position = position
+        self.addChild(emitter!)
     }
 }
