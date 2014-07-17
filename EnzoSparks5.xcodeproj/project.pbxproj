@@ -19,6 +19,8 @@
 		DDB9561219773FE6001590E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB9561019773FE6001590E6 /* Main.storyboard */; };
 		DDB9561419773FE6001590E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB9561319773FE6001590E6 /* Images.xcassets */; };
 		DDB9562019773FE6001590E6 /* EnzoSparks5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9561F19773FE6001590E6 /* EnzoSparks5Tests.swift */; };
+		F745B3451977F851007F2B26 /* Enio.mov in Resources */ = {isa = PBXBuildFile; fileRef = F745B3441977F851007F2B26 /* Enio.mov */; };
+		F77A4FAE1978051800008598 /* smiley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F77A4FAD1978051800008598 /* smiley.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		DDB9561919773FE6001590E6 /* EnzoSparks5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnzoSparks5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB9561E19773FE6001590E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDB9561F19773FE6001590E6 /* EnzoSparks5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnzoSparks5Tests.swift; sourceTree = "<group>"; };
+		F745B3441977F851007F2B26 /* Enio.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Enio.mov; sourceTree = "<group>"; };
+		F77A4FAD1978051800008598 /* smiley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smiley.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		DD80400719775C6700D0F09A /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				F77A4FAD1978051800008598 /* smiley.jpg */,
 				DD80400319775C5C00D0F09A /* ParticleStars.scnp */,
 				DD80400419775C5C00D0F09A /* star.png */,
 				DD803FFF19775C4000D0F09A /* ParticleReactor.scnp */,
@@ -83,6 +88,7 @@
 		DDB955FA19773FE6001590E6 = {
 			isa = PBXGroup;
 			children = (
+				F745B3441977F851007F2B26 /* Enio.mov */,
 				DD80400719775C6700D0F09A /* Particles */,
 				DDB9560519773FE6001590E6 /* EnzoSparks5 */,
 				DDB9561C19773FE6001590E6 /* EnzoSparks5Tests */,
@@ -222,9 +228,11 @@
 				DDB9561419773FE6001590E6 /* Images.xcassets in Resources */,
 				DD804009197760D100D0F09A /* ParticleSnow.sks in Resources */,
 				DDB9560B19773FE6001590E6 /* GameScene.sks in Resources */,
+				F745B3451977F851007F2B26 /* Enio.mov in Resources */,
 				DD80400519775C5C00D0F09A /* ParticleStars.scnp in Resources */,
 				DD80400619775C5C00D0F09A /* star.png in Resources */,
 				DD80400119775C4000D0F09A /* ParticleReactor.scnp in Resources */,
+				F77A4FAE1978051800008598 /* smiley.jpg in Resources */,
 				DDB9561219773FE6001590E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,24 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         backgroundColor = SKColor.blackColor()
-        showEmitter("ParticleSnow", position: CGPoint(x: 200, y: 200))
+        showEmitter("ParticleSnow", position: CGPoint(x: frame.width/2, y: frame.height - 50))
+        
+        /* Add video */
+        let video = SKVideoNode(videoFileNamed: "Enio.mov")
+        video.position = CGPoint(x: 0, y: 0)
+        video.setScale(0.2)
+        
+        let crop = SKCropNode()
+        crop.position = CGPoint(x: 500, y: 300)
+        //let mask = SKShapeNode(ellipseOfSize: CGSize(width: 100, height: 100))
+        let mask = SKSpriteNode(imageNamed: "star")
+        mask.setScale(5.0)
+        //mask.alpha = 0.5
+        crop.maskNode = mask
+        crop.addChild(video)
+        crop.zPosition = 1.0
+        self.addChild(crop)
+        video.play()
 
     }
     
