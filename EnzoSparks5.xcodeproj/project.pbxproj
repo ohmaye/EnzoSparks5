@@ -19,6 +19,7 @@
 		DDB9561219773FE6001590E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB9561019773FE6001590E6 /* Main.storyboard */; };
 		DDB9561419773FE6001590E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB9561319773FE6001590E6 /* Images.xcassets */; };
 		DDB9562019773FE6001590E6 /* EnzoSparks5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9561F19773FE6001590E6 /* EnzoSparks5Tests.swift */; };
+		F710A0CF1978DB5E0031E6DE /* ParticleRain.sks in Resources */ = {isa = PBXBuildFile; fileRef = F710A0CE1978DB5E0031E6DE /* ParticleRain.sks */; };
 		F745B3451977F851007F2B26 /* Enio.mov in Resources */ = {isa = PBXBuildFile; fileRef = F745B3441977F851007F2B26 /* Enio.mov */; };
 		F77A4FAE1978051800008598 /* smiley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F77A4FAD1978051800008598 /* smiley.jpg */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,8 @@
 		DDB9561919773FE6001590E6 /* EnzoSparks5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnzoSparks5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB9561E19773FE6001590E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDB9561F19773FE6001590E6 /* EnzoSparks5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnzoSparks5Tests.swift; sourceTree = "<group>"; };
+		F710A0CD1978D75C0031E6DE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		F710A0CE1978DB5E0031E6DE /* ParticleRain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ParticleRain.sks; sourceTree = "<group>"; };
 		F745B3441977F851007F2B26 /* Enio.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Enio.mov; sourceTree = "<group>"; };
 		F77A4FAD1978051800008598 /* smiley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smiley.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +84,8 @@
 				DD803FFF19775C4000D0F09A /* ParticleReactor.scnp */,
 				DD80400019775C4000D0F09A /* spark.png */,
 				DD804008197760D100D0F09A /* ParticleSnow.sks */,
+				F710A0CD1978D75C0031E6DE /* MyPlayground.playground */,
+				F710A0CE1978DB5E0031E6DE /* ParticleRain.sks */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				DD804009197760D100D0F09A /* ParticleSnow.sks in Resources */,
 				DDB9560B19773FE6001590E6 /* GameScene.sks in Resources */,
 				F745B3451977F851007F2B26 /* Enio.mov in Resources */,
+				F710A0CF1978DB5E0031E6DE /* ParticleRain.sks in Resources */,
 				DD80400519775C5C00D0F09A /* ParticleStars.scnp in Resources */,
 				DD80400619775C5C00D0F09A /* star.png in Resources */,
 				DD80400119775C4000D0F09A /* ParticleReactor.scnp in Resources */,

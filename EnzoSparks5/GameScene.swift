@@ -9,10 +9,13 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var bubbleEmitter : SKEmitterNode?
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         backgroundColor = SKColor.blackColor()
-        showEmitter("ParticleSnow", position: CGPoint(x: frame.width/2, y: frame.height - 50))
+        //showEmitter("ParticleSnow", position: CGPoint(x: frame.width/2, y: frame.height - 50))
         
         /* Add video */
         let video = SKVideoNode(videoFileNamed: "Enio.mov")
@@ -35,21 +38,41 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
+        println("Touch began")
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
+            if !bubbleEmitter {
+                bubbleEmitter = showEmitter("ParticleRain", position: location)
+            }
             
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+        }
+    }
+    
+    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
+        
+        println("Moved")
+         for touch: AnyObject in touches! {
+            let location = touch.locationInNode(self)
+            //println(location)
+            bubbleEmitter!.position = location
+        }
+    }
+    
+    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+        println("Touch cancelled")
+        if bubbleEmitter {
+            bubbleEmitter!.removeFromParent()
+            bubbleEmitter = nil
+        }
+        //super.touchesCancelled(touches, withEvent: event)
+    }
+    
+    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
+        println("Touch ended")
+        if bubbleEmitter {
+            bubbleEmitter!.removeFromParent()
+            bubbleEmitter = nil
         }
     }
    
@@ -58,10 +81,11 @@ class GameScene: SKScene {
     }
     
     
-    func showEmitter( name : String, position : CGPoint) {
+    func showEmitter( name : String, position : CGPoint) -> SKEmitterNode {
         let path = NSBundle.mainBundle().pathForResource(name, ofType: "sks")
         let emitter = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? SKEmitterNode
         emitter!.position = position
         self.addChild(emitter!)
+        return emitter!
     }
 }
