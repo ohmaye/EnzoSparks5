@@ -44,29 +44,21 @@ class GameScene: SKScene {
             
             if !bubbleEmitter {
                 bubbleEmitter = showEmitter("ParticleRain", position: location)
+                bubbleEmitter!.targetNode = self
             }
             
         }
     }
     
-    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
-        
-        println("Moved")
-         for touch: AnyObject in touches! {
-            let location = touch.locationInNode(self)
-            //println(location)
-            bubbleEmitter!.position = location
+
+    
+    func moveEmitter( location : CGPoint ) {
+        if let emitter = bubbleEmitter {
+            let point = self.convertPointFromView(location)
+            emitter.position = point
         }
     }
     
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
-        println("Touch cancelled")
-        if bubbleEmitter {
-            bubbleEmitter!.removeFromParent()
-            bubbleEmitter = nil
-        }
-        //super.touchesCancelled(touches, withEvent: event)
-    }
     
     override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
         println("Touch ended")

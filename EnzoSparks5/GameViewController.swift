@@ -44,6 +44,12 @@ class GameViewController: UIViewController {
             skView.presentScene(scene)
         }
     }
+    
+    @IBAction func handleGesture( gestureRecognizer : UIGestureRecognizer ) {
+        println("Gesture recognizer")
+        let location = gestureRecognizer.locationInView(self.view)
+        ((self.view as SKView).scene as GameScene).moveEmitter( location )
+    }
 
     override func shouldAutorotate() -> Bool {
         return true

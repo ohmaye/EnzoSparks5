@@ -23,7 +23,12 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="7YA-ao-lYk"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7YA-ao-lYk">
+                    <connections>
+                        <action selector="handleGesture:" destination="BV1-FR-VrT" id="NCP-94-H4E"/>
+                        <outlet property="delegate" destination="BV1-FR-VrT" id="bcx-BN-Kgl"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
